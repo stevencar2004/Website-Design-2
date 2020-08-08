@@ -1,0 +1,216 @@
+// __________ESTILOS DE LOS CONTENEDORES__________
+html {
+	scroll-behavior: smooth;
+}
+body {
+	overflow-x: hidden;
+	font-size: 16px;
+}
+
+// ESTILOS PARA EL ICONO DE IR ARRIBA
+.up {
+	background-color: $back-dark-alt;
+	font-size: 2em;
+	text-align: center;
+	line-height: 1.875em /2;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+	line-height: 1.5em;
+}
+.up:hover {
+	background-color: $back-dark;
+	cursor: pointer;
+}
+// estilos para el header o cabecera de la pagina
+.header {
+	background-color: transparentize(black, 0.3);
+	//ESTILOS PARA EL LOGO DE LA PAGINA
+	&__title {
+		color: $back-dark;
+		text-transform: uppercase;
+		@include oswald(500);
+	}
+	//ESTILOS PARA EL MENU DE LA PAGINA
+	&__navigation {
+		list-style: none;
+	}
+	&__link:hover &__item {
+		color: $back-dark;
+	}
+	&__item {
+		@include oswald(600);
+		font-size: 1.1em;
+		color: $color-light-alt-1;
+		display: inline-block;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+}
+
+//ESTILOS PARA LA 1RA SECCION DE LA PAGINA | SKILLS
+.skills {
+	&__logo {
+		.skills__icon {
+			color: $back-dark;
+			font-size: 5em;
+		}
+	}
+	&__boxtitle {
+		width: 100%;
+		.skills__title {
+			@include oswald(500);
+			font-size: 3em;
+		}
+	}
+	&__boxtext {
+		.skills__text {
+			@include roboto(500);
+			line-height: 1.5em;
+			color: $font-color;
+		}
+	}
+	.button {
+		&__content {
+			background-color: $back-dark-alt;
+		}
+		&__content:hover {
+			background-color: $back-dark;
+			color: $color-light;
+			cursor: pointer;
+		}
+		&__title {
+			font-size: 0.8em;
+			@include sora;
+		}
+	}
+}
+
+// ESTILOS PARA LA 2 Y 3 SECCION DE LA PAGINA | SERVICES
+.services {
+	&__boximg::before {
+		content: "";
+		position: absolute;
+		width: 1000px;
+		height: 1000px;
+		top: 100%;
+		left: 0;
+		transform: rotate(70deg) translate(-70%, 15%);
+		background-color: transparentize($color: #000000, $amount: 0.8);
+	}
+	&__boxim::after {
+		content: "";
+		position: absolute;
+		width: 1000px;
+		height: 1000px;
+		top: 100%;
+		right: 0;
+		transform: rotate(-70deg) translate(70%, 15%);
+		background-color: transparentize($color: #000000, $amount: 0.8);
+	}
+	&__box {
+		background-color: $color-light;
+	}
+	&__boxim:before {
+		content: "";
+		display: none;
+	}
+	&__icon {
+		border-radius: 50%;
+		color: $back-dark;
+		padding: 0.2em;
+		z-index: 10;
+		font-size: 15 * 1.35em;
+	}
+	&__title {
+		@include oswald(600);
+		font-size: 2.5em;
+	}
+	&__text {
+		@include sora;
+		font-size: 1.2em;
+		line-height: 1.5em;
+		color: $font-color;
+	}
+	.button--services {
+		& .button__content {
+			background-color: $back-dark-alt;
+		}
+		& .button__content:hover {
+			background-color: $back-dark;
+			color: $color-light;
+			cursor: pointer;
+		}
+		& .button__title {
+			font-size: 0.95em;
+			@include sora;
+		}
+	}
+}
+
+// ESTILOS PARA EL PIE DE LA PAGINA | FOOTER
+.footer {
+	background-color: black;
+	color: white;
+	padding: 0.5em 0 0 0.8em;
+	&__title {
+		padding: 0.5em 0 0 0;
+		width: 100%;
+		height: calc(100% / 3);
+		@include sora;
+		color: $font-color;
+		font-size: 1em;
+		transition: color 0.3s ease;
+	}
+	&__title:hover {
+		color: $color-light;
+		cursor: pointer;
+	}
+	&__icon {
+		margin-right: 0.5em;
+	}
+	&__social {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 0 5em;
+	}
+	&__link {
+		margin-left: 2em;
+		padding: 0.7em;
+		border-radius: 50%;
+		transition: all 0.3s ease;
+	}
+	.icon--facebook {
+		background-color: $face-c;
+	}
+	.icon--linkedin {
+		background-color: $linke-c;
+	}
+	.icon--twitter {
+		background-color: $twit-c;
+	}
+	.icon--facebook:hover {
+		border: none;
+		background-color: $face;
+	}
+	.icon--linkedin:hover {
+		border: none;
+		background-color: $linke;
+	}
+	.icon--twitter:hover {
+		border: none;
+		background-color: $twit;
+	}
+	.social__icon {
+		color: $color-light;
+		font-size: 1.1em;
+	}
+	&__copy {
+		@include roboto(500);
+		color: $font-color;
+		font-size: 0.9em;
+	}
+}

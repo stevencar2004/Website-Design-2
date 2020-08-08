@@ -1,0 +1,184 @@
+// __________DISEÑOS DE LOS CONTENEDORES__________
+
+// ESTILOS PARA EL ICONO DE IR ARRIBA
+.up {
+	width: 1.575em;
+	height: 1.575em;
+	position: fixed;
+	z-index: 10000;
+	bottom: 0.8em;
+	right: 0.7em;
+	display: block;
+	border-radius: 1em;
+}
+
+// estilos para el header o cabacera de la pagina
+.header {
+	min-width: 100%;
+	height: 4em;
+	position: relative;
+	z-index: 3;
+	overflow: hidden;
+	display: flex;
+	//ESTILOS PARA EL LOGO DE LA PAGINA
+	&__boxtitle {
+		width: 50%;
+		height: 100%;
+		line-height: 4em;
+		position: relative;
+	}
+	&__title {
+		padding-left: 1em;
+	}
+	//ESTILOS PARA EL MENU DE LA PAGINA
+	&__nav {
+		width: 50%;
+		height: 100%;
+		position: relative;
+	}
+	&__navigation {
+		width: 100%;
+		line-height: 4em;
+		display: flex;
+		justify-content: flex-end;
+		padding-right: 0.2em;
+	}
+	&__item {
+		padding: 0 1.5em;
+	}
+}
+
+//ESTILOS PARA LA 1RA SECCION DE LA PAGINA | SKILLS
+.skills {
+	width: 100%;
+	height: 100vh;
+	margin-top: -4em;
+	padding: 2em 1em;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	&__box {
+		width: calc(100% / 3);
+		height: 85%;
+		padding: 1em 0.5em;
+		overflow: hidden;
+		position: relative;
+	}
+	&__logo {
+		width: 100%;
+		margin-bottom: 1.8em;
+	}
+	&__boxtitle {
+		width: 100%;
+		margin-bottom: 1.5em;
+		height: 15%;
+	}
+	&__boxtext {
+		width: 90%;
+		height: 45%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 2em;
+		overflow: hidden;
+	}
+	.button {
+		width: 7em;
+		height: 2.8em;
+		height: 10%;
+		position: absolute;
+		bottom: 5px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+// ESTILOS PARA LA 2 Y 3 SECCION DE LA PAGINA | SERVICES
+.services {
+	.boximg--right,
+	.boxinfo--right {
+		order: 2;
+	}
+	.boximg--left,
+	.boxinfo--left {
+		order: 1;
+	}
+
+	.p-l {
+		padding-left: 2.2em;
+	}
+	.p-r {
+		padding-left: 2.2em;
+		padding-right: 2.2em;
+	}
+	width: 100%;
+	height: 200vh;
+	&__box {
+		width: 100%;
+		height: 50%;
+		position: relative;
+		display: flex;
+		justify-items: center;
+		align-items: center;
+		overflow: hidden;
+	}
+	&__boximg,
+	&__boxim {
+		position: relative;
+		width: 50%;
+		height: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__icon {
+		position: relative;
+		display: inline-block;
+	}
+	&__boxinfo {
+		width: 50%;
+		height: 60%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	&__title {
+		width: 100%;
+		margin-bottom: 0.5em;
+	}
+	&__text {
+		width: 90%;
+		margin-bottom: 0.8em;
+	}
+	.button__content {
+		width: 8em;
+		height: 3em;
+	}
+}
+
+// ESTILOS PARA EL PIE DE LA PAGINA | FOOTER
+.footer {
+	z-index: 1000;
+	width: 100%;
+	height: 8em;
+	overflow: hidden;
+	&__info {
+		width: 50%;
+		height: 85%;
+		float: left;
+	}
+	&__social {
+		width: 50%;
+		height: 85%;
+		float: left;
+	}
+	.clear {
+		clear: both;
+		overflow: hidden;
+	}
+	&__boxcopy {
+		width: 100%;
+		height: 10%;
+		text-align: center;
+	}
+}
